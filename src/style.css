@@ -1,0 +1,248 @@
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  color: #333639;
+  transition: all 0.3s ease;
+}
+
+*::after, *::before {
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+body {
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 100vw;
+}
+
+#nav-header {
+  flex: 0 0 auto;
+  display: flex;
+  padding: 5vh 7.5vw;
+  align-items: center;
+  border: 5px solid #333639;
+  background: #ddd;
+}
+
+#nav-header #option {
+  font-size: 50px;
+  line-height: 50px;
+  margin-right: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+
+#nav-header #search {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border: 5px solid #333639;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #333639;
+  flex: 1;
+}
+
+#nav-header input {
+  border: none;
+  flex: 1;
+  padding: 0 10px 0 15px;
+  font-size: 18px;
+  border-radius: 0;
+  min-width: 0;
+}
+
+#nav-header button {
+  border: none;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px 0 15px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #6cf;
+  white-space: nowrap;
+  margin-left: 5px;
+  border-radius: 0;
+  user-select: none;
+  cursor: pointer;
+}
+
+#nav-main {
+  flex: 1;
+  overflow: auto;
+}
+
+#siteList {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+}
+
+::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
+}
+
+#nav-main .site .wrap {
+  background: #6cf;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 5px solid #333639;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+}
+
+#nav-main .site .wrap .logo {
+  background: #fff;
+  text-align: center;
+  font-size: 9vw;
+  font-weight: bold;
+  line-height: 14vw;
+  height: 16vw;
+  width: 16vw;
+  border-radius: 50%;
+  border: 5px solid #333639;
+  margin: 3vw auto;
+}
+
+#nav-main .site .wrap .title {
+  background: #fff;
+  width: 100%;
+  text-align: center;
+  line-height: 6vw;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 10px;
+  border-top: 5px solid #333639;
+  font-size: 4vw;
+}
+
+#nav-main .site .wrap .delete {
+  position: absolute;
+  right: 1vw;
+  top: 1vw;
+  font-size: 6vw;
+  line-height: 6vw;
+  user-select: none;
+  cursor: pointer;
+}
+
+#nav-main #add {
+  height: 35vw;
+  display: grid;
+  place-items: center;
+}
+
+#nav-main #add #addIcon {
+  height: 18vw;
+  width: 18vw;
+  background: #fff;
+  border-radius: 50%;
+  border: 5px solid #333639;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 9vw;
+  user-select: none;
+  cursor: pointer;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+svg:last-of-type {
+  fill: currentColor;
+}
+
+@media (min-width: 500px) {
+  body {
+    align-items: center;
+  }
+  header, main {
+    width: 1000px;
+  }
+  #nav-header {
+    border: none;
+    background: none;
+    padding: 100px 200px;
+  }
+  #siteList {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0;
+  }
+  #nav-main .site .wrap {
+    margin: 20px;
+  }
+  #nav-main .site .wrap .logo {
+    background: #fff;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 80px;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 5px solid #333639;
+    margin: 12px auto;
+  }
+  #nav-main .site .wrap .title {
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 10px;
+    border-top: 5px solid #333639;
+    font-size: 20px;
+  }
+  #nav-main .site .wrap .delete {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  #nav-main #add {
+    height: 179px;
+    display: grid;
+    place-items: center;
+  }
+  #nav-main #add #addIcon {
+    height: 100px;
+    width: 100px;
+    background: #fff;
+    border-radius: 50%;
+    border: 5px solid #333639;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+  }
+}

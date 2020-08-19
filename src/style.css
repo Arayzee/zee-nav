@@ -148,9 +148,10 @@ body {
 }
 
 #nav-main #add {
-  height: 35vw;
-  display: grid;
-  place-items: center;
+  height: calc(30vw + 25px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #nav-main #add #addIcon {

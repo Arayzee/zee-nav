@@ -148,9 +148,10 @@ body {
 }
 
 #nav-main #add {
-  height: 35vw;
-  display: grid;
-  place-items: center;
+  height: calc(30vw + 25px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #nav-main #add #addIcon {
@@ -247,4 +248,4 @@ svg:last-of-type {
   }
 }
 
-/*# sourceMappingURL=style.036a1fb0.css.map */
+/*# sourceMappingURL=style.14a533d9.css.map */
